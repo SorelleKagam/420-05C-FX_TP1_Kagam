@@ -1,11 +1,11 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def code_html():
-    return '<html><body><h1>Bonjour</h1></body></html>'
+
+def accueil():
+    return render_template ('accueil.jinja')
 
 
 if __name__ == '__main__':
