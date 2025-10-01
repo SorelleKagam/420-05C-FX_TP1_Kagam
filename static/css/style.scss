@@ -1,27 +1,94 @@
-.container
-{
+@charset "UTF-8";
 
-    padding:0px
-    margin:0px
-    font-family: 'Roboto', sans-serif
-    color: black
+$police-titres:"Oswald", sans-serif;
+$police-texte-courant:"Montserrat", sans-serif;
+$police-taille-defaut:15px;
+$police-interlignage-defaut:1em;
+
+.title{
+  font-family: $police-titres;
+  font-size: 60px;
+  font-weight: 300;
+  font-size: 55px;
+}
+
+%paragraphe{
+  font-family: $police-texte-courant;
+  font-size: 35px;
+  height: $police-interlignage-defaut;
+  font-weight: 100;
+}
+
+body{
+  @extend %paragraphe;
+}
+h1{
+  @extend .title;
+}
+h2{
+  @extend .title;
+}
+h3{
+  @extend .title;
+}
+h4{
+  @extend .title;
+}
+h5{
+  @extend .title;
+}
+h6{
+  @extend .title;
 }
 
 
-main
-
-   
-    background-color:burlywood
-   
-
-
-header, footer
-
-    background-color: brown
-    color:black
-    padding: 15px
-    text-align: center
-    position: sticky
+/*******Varaiable SCSS*****************/
+$primary:#9B8816;
+$secondary:#684E32;
+$tertiary:#F98948;
+$couleur-sombre:#5D3A00 ;
+$couleur-claire:#F9EA9A ;
+$container-max-width: 1200px;
+$link-color:$tertiary;
+$list-group-action-active-color:orange;
+$list-group-bg:$couleur-sombre;
+$list-group-color:white;
 
 
-    
+
+
+
+/*************************Navigation*******************/
+.nav-link.active {
+  background-color: $primary;
+  font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+  background-color: $primary;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+/*****************page_Traiteur********/
+
+
+  
+
+      
+/******Footer********/
+.navigation-secondaire>p:hover {
+  text-decoration: underline;
+}
+.icon-right{
+  text-align: right;
+  
+  .go-top >i{
+      bottom: 0rem;
+      right: 2rem;
+      color:#F9EA9A;
+      font-size: 55px;
+      &:hover{
+          color: gray;
+      }
+    }
+}   
+
+
