@@ -1,1 +1,14 @@
 {% extends "base.jinja" %}
+{% block contenu %}
+<div class="row">
+        <div class="col-lg-12">
+                <h2>{{service.titre}}</h2>
+                <p>{{service.localisatio}}</p>
+                <p>{{service.description}}</p>
+                <p>{{service.cout}}</p>
+                <p>Ajouté le{{livre.date_jour}}</p>
+                <p>{{service.statut}}</p>
+                <a href="/service? id = {{service.id}}">{{service.titre}}</a>
+        </div>
+</div>
+{% endblock %}
