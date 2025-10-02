@@ -67,8 +67,14 @@ $list-group-color:white;
   background-color: $primary;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-/*****************page_Traiteur********/
 
+main{
+  background-color: #F9EA9A;
+}
+header,footer
+{
+  background-color: #5D3A00;
+}
 
   
 
@@ -89,6 +95,11 @@ $list-group-color:white;
           color: gray;
       }
     }
-}   
+}
+
+.logo
+{
+  align-items: center;
+}
 
 

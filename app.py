@@ -8,7 +8,7 @@ def index():
     """Récupère les paramètres régionaux pour afficher la page d'accueil"""
     # Récupérer le cookie langue
     langue = request.cookies.get('langue', 'fr')   
-    return render_template('Accueil.jinja')
+    return render_template('base.jinja')
 @app.route('/choisir_langue')
 def choisir_langue():
     """ Modifie les paramètres régionaux """

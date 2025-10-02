@@ -24,7 +24,14 @@ body {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/*****************page_Traiteur********/
+main {
+  background-color: #F9EA9A;
+}
+
+header, footer {
+  background-color: #5D3A00;
+}
+
 /******Footer********/
 .navigation-secondaire > p:hover {
   text-decoration: underline;
@@ -41,4 +48,8 @@ body {
 }
 .icon-right .go-top > i:hover {
   color: gray;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.logo {
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */

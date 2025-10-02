@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Le titre est maintenant un bloc, avec un titre par défaut -->
     <title>{% block title %}Accueil{% endblock %} | KServices</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
     
     <!-- FAVICON (Utilisation de l'URL fourni) -->
     <link rel="icon" href="https://www.cegepgarneau.ca/favicon.ico" />
@@ -29,21 +30,21 @@
 <body>
    <header class="container">
       <div class="row">
-         <div class="col-lg-4">
-            <a href="/template/Accueil.jinja">
+         <div class="col-lg-4 logo">
+            <a href="/templates/base.jinja">
                <img src="/static/images/logo.png" alt="logo du site">
             </a>
          </div>
          <div class="col-lg-4">
             <ul class="nav">
                <li class="nav-item">
-                  <a class="nav-Accueil" aria-current="page" href="Accueil.jinja">Accueil</a>
+                  <a class="nav-Accueil" aria-current="page" href="/templates/base.jinja">Accueil</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-Ajout" href="ajout.jinja">Ajout</a>
+                  <a class="nav-Ajout" href="/templates/ajoutService.jinja">Ajout_Services</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-services" href="services.jinja">Services</a>
+                  <a class="nav-services" href="/templates/services.jinja">Services</a>
                </li>
             </ul>
          </div>
@@ -55,11 +56,8 @@
       </div>
    </header>
    <main class="container">
-     <div class="row">
-         <div class="col-lg-12">
-             <p>papa</p>
-         </div>
-     </div>
+     {% block contenu %}
+        {% endblock %}>
    </main>
    <footer class="container">
       <div class="row">
