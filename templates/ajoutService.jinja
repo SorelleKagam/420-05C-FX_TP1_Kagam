@@ -1,1 +1,44 @@
 {% extends "base.jinja" %}
+{% block contenu %}
+<h2>Ajouter un service</h2>
+<form method="post" action="/ajout" novalidate="novalidate">
+    <label for="titre">Titre</label>
+    <div>
+        <input type="text" id="titre" value="{{titre}}" class="{{classe_titre}}">
+        <div class="invalid-feedback">le titre doit avoir au moins et au plus 50 caractères</div>
+    </div>
+    <label for="localisation">Localisation</label>
+    <div>
+        <input type="text" id="Localisation" value="{{Localisation}}" class="{{classe_Localisation}}">
+        <div class="invalid-feedback">le titre doit avoir au moins 1 et au plus 50 caractères</div>
+    </div>
+    <label for="description">Description</label>
+    <div>
+        <input type="text" id="description" value="{{description}}" class="{{classe_description}}">
+        <div class="invalid-feedback">le titre doit avoir au moins 5 et au plus 2000 caractères</div>
+    </div>
+    <label for="cout">Coût</label>
+    <div>
+        <input type="number" id="cout" value="{{cout}}" class="{{classe_cout}}">
+        <div class="invalid-feedback">le titre doit avoir au moins et au plus 50 caractères</div>
+    </div>
+    <label for="choix_categorie">Choisissez une caégorie :</label>
+    <div>
+        <select id="choix_categorie" name="categorie_id" required>
+        
+        <option value="" disabled selected>-- Veuillez sélectionner --</option> 
+        
+        {% for option in options %}
+            <option value="{{ option.id_categorie }}">
+                {{ option.nom_categorie }}
+            </option>
+        {% endfor %}
+        </select>
+    </div>
+    <label for="dateJour">Date ajout</label>
+    <div>
+        <input type="date" id="dateJour" value="{{ date_actuelle }}" class="{{classe_dateJour}}">
+        <div class="invalid-feedback">renseignez la date du jour</div>
+    </div>
+</form>
+{% endblock %}>
